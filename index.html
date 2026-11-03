@@ -23,7 +23,7 @@
             padding: 40px 30px;
             border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            max-width: 600px;
+            max-width: 650px;
             width: 100%;
         }
         h1 {
@@ -42,7 +42,7 @@
             line-height: 1.6;
             color: #555;
             margin-bottom: 15px;
-            text-align: left; /* Текст ровнее читается по левому краю */
+            text-align: left;
         }
         .highlight {
             background-color: #fff3f4;
@@ -53,6 +53,72 @@
             text-align: left;
             font-size: 15px;
         }
+        
+        /* --- Стили для хронологии --- */
+        details {
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin: 20px 0;
+            padding: 10px 15px;
+            text-align: left;
+        }
+        summary {
+            font-weight: bold;
+            color: #0077FF;
+            cursor: pointer;
+            outline: none;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary::before {
+            content: "📖";
+            font-size: 20px;
+        }
+        summary:hover {
+            text-decoration: underline;
+        }
+        .timeline {
+            margin-top: 20px;
+            padding-left: 15px;
+            border-left: 2px solid #ff7b89;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 15px;
+        }
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -22px;
+            top: 3px;
+            width: 12px;
+            height: 12px;
+            background-color: #ff7b89;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #ff7b89;
+        }
+        .timeline-time {
+            font-size: 13px;
+            color: #888;
+            font-weight: bold;
+            margin-bottom: 3px;
+            display: block;
+        }
+        .timeline-text {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.4;
+        }
+        /* --------------------------- */
+
         .links {
             display: flex;
             flex-direction: column;
@@ -86,7 +152,7 @@
         <span class="emoji">🐾</span>
         <h1>Наши питомцы немного приболели...</h1>
         
-        <p>Привет, друзья! Если вы сегодня попытались зайти в «Милых питомцев» и столкнулись с ошибкой — не пугайтесь. Наш прежний хостинг-провайдер подвергся масштабной кибератаке, из-за чего сервера игры временно отключились.</p>
+        <p>Привет, друзья! Если вы сегодня попытались зайти в «Милых питомцев» и столкнулись с ошибкой — не пугайтесь. Наш хостинг-провайдер подвергся масштабной кибератаке, из-за чего сервера игры временно отключились.</p>
         
         <div class="highlight">
             <b>Что с вашими питомцами?</b><br>
@@ -97,6 +163,30 @@
         Сейчас мы экстренно переезжаем на новое, более надежное и защищенное оборудование. Мы делаем всё возможное, чтобы запустить игру в ближайшие несколько дней.</p>
         
         <p><b>Мы скоро вернемся!</b> Как только появятся точные сроки запуска, мы сразу опубликуем новости в наших официальных сообществах. Подписывайтесь, чтобы ничего не пропустить, и спасибо за ваше терпение! ⚡</p>
+
+        <!-- НОВЫЙ БЛОК: ХРОНОЛОГИЯ -->
+        <details>
+            <summary>Что именно случилось? (Хронология)</summary>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-time">Ночь с 1 на 2 ноября</span>
+                    <div class="timeline-text">Злоумышленники совершили масштабную кибератаку на инфраструктуру нашего прежнего хостинга. Сервера были экстренно отключены от сети для предотвращения распространения угрозы.</div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">2-3 ноября</span>
+                    <div class="timeline-text">Мы оценили масштаб бедствия. К счастью, наши резервные копии остались целы. Мы начали поиск нового, более надежного сервера для переезда.</div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">3 ноября, 20:00</span>
+                    <div class="timeline-text">Мы восстановили контроль над нашим доменом mpets.su, перенаправили его на безопасный сервер и создали эту страницу-заглушку. А также запустили официальные сообщества в Telegram и ВКонтакте, чтобы оставаться на связи!</div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">Прямо сейчас</span>
+                    <div class="timeline-text">Идет активная настройка нового сервера. Мы хотим убедиться, что ваши питомцы вернутся в полностью безопасный и защищенный мир.</div>
+                </div>
+            </div>
+        </details>
+        <!-- КОНЕЦ НОВОГО БЛОКА -->
         
         <div class="links">
             <a href="https://vk.ru/mpets_su" class="btn btn-vk" target="_blank">Мы во ВКонтакте</a>
