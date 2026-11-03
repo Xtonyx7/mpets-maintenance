@@ -207,6 +207,11 @@
         .btn-beget:hover {
             background-color: #357ABD;
         }
+        .beget-links-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap; /* Чтобы на мобильных кнопки переносились на новую строку, если не влезают */
+        }
     </style>
 </head>
 <body>
@@ -274,9 +279,13 @@
         </div>
 
         <!-- НОВЫЙ БЛОК: ССЫЛКА НА BEGET -->
+                <!-- БЛОК: ССЫЛКА НА BEGET -->
         <div class="beget-link-block">
-            <p><b>Хотите узнать больше?</b> Если вам интересны технические подробности и официальная хронология восстановления, вы можете следить за новостями напрямую в сообществе нашего прежнего провайдера.</p>
-            <a href="https://vk.ru/begetru" class="btn btn-beget" target="_blank">Официальные новости Beget</a>
+            <p><b>Хотите узнать больше?</b> Если вам интересны технические подробности и официальная хронология восстановления, вы можете следить за новостями напрямую в официальных сообществах нашего прежнего провайдера:</p>
+            <div class="beget-links-container">
+                <a href="https://vk.ru/begetru" class="btn btn-beget" target="_blank">Новости в ВК</a>
+                <a href="https://t.me/beget_official" class="btn btn-beget" target="_blank">Новости в Telegram</a>
+            </div>
         </div>
         <!-- КОНЕЦ БЛОКА -->
         
